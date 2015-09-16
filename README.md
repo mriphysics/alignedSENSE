@@ -1,7 +1,7 @@
 # alignedSENSE
 Tools for aligned reconstruction of multishot MR.
 
-This repository provides methods to implement the reconstruction methods and reproduce the synthetic experiments included in the manuscript ''Sensitivity encoding for aligned multishot magnetic resonance reconstruction'', L. Cordero-Grande, R. P. A. G. Teixeira, E. J. Hughes, J. Hutter, A. N. Price, and J. V. Hajnal. Unpublished.
+This repository provides tools to implement the reconstruction methods and reproduce the synthetic experiments included in the manuscript ''Sensitivity encoding for aligned multishot magnetic resonance reconstruction'', L. Cordero-Grande, R. P. A. G. Teixeira, E. J. Hughes, J. Hutter, A. N. Price, and J. V. Hajnal. Unpublished.
 
 The code has been developed in MATLAB and has the following structure:
 
