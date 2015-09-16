@@ -28,3 +28,6 @@ contains the main function used to evaluate the results: *errorFit.m*.
 
 ###### ./synth
 contains the methods used to generate synthetically motion corrupted data: *generate[Encoding,Grids].m*, *synthesize[Y-T].m*.
+
+NOTE: When running the scripts, set the *gpu* variable to 0 if your system does not support NVIDIA GPU computing under MATLAB.
+
