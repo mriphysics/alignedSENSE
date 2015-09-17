@@ -20,31 +20,31 @@ cont=1;
 %pathFig=sprintf('%s/Fig9',pathOu);
 %mkdir(pathFig)
 
-FontSize=30;
-FontSizeA=30;
-FontSizeB=30;
+FontSize=20;
+FontSizeA=16;
+FontSizeB=13;
 ColorSet=varycolor(V);
 markers = {'o','s','d','^','>','v','<','p','h','x'};
 for e=1:E
     figure(cont)
     for v=1:V
         NS=length(errF{v}{e}{1});
-        plot(log10(1:NS),log10(errF{v}{e}{1}),'Color',ColorSet(v,:),'Marker',markers{v},'LineWidth',5,'MarkerSize',15);
+        plot(log10(1:NS),log10(errF{v}{e}{1}),'Color',ColorSet(v,:),'Marker',markers{v},'LineWidth',2);
         hold on
         ThVal{v}=sprintf('\\Delta\\theta=%d%c',theta(v),char(176));
     end   
     axis([0 2 -5 5.5])
     xlabel('$\log_{10}(i)$','interpreter','latex','FontSize',FontSizeA)
     ylabel('$\log_{10}(f)$','interpreter','latex','FontSize',FontSizeA)
-    title(sprintf('%s',EncMeth{e}),'Fontsize',FontSize)
-    AX=legend(ThVal,'Location','SouthWest');
+    title(sprintf('%s',EncMeth{e}),'interpreter','latex','Fontsize',FontSize)
+    AX=legend(ThVal,'Location','SouthEast');
     LEG = findobj(AX,'type','text');
     set(LEG,'FontSize',FontSizeB)
     legend('boxoff')
     grid on
     set(gca,'fontsize',FontSizeB)
     set(gcf,'Color',[1 1 1])
-    set(gcf, 'Position', get(0,'Screensize'))        
+    %%set(gcf, 'Position', get(0,'Screensize'))        
     %export_fig(sprintf('%s/SubFigNew%02d.pdf',pathFig,cont))
     cont=cont+1;
 end

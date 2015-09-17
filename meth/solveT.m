@@ -15,19 +15,19 @@ function [T,x,w,flagw]=solveT(x,y,M,T,S,A,kGrid,kkGrid,rGrid,rkGrid,nT,w,flagw,g
 %   RKGRID is a grid of points in the spatial-spectral domain
 %   NT is the number of iterations of the Newton's method (not carefully
 %   checked for NT>1)
-%   W is the w in ec. (22) of the paper
+%   W is the w in ec. (27) of the paper
 %   FLAGW keeps track of previous change in the energy of the solution to 
 %   update w
 %   GPU is a flag that determines whether to use gpu (1) or cpu (0) 
 %   computation
 %   BLOCKSIZE indicates the number of shots to be processed in a chunk
-%   MEANT is a flag that determines whether to use ec. (23) of the paper,
+%   MEANT is a flag that determines whether to use ec. (28) of the paper,
 %   defaults to 1
 %   It returns:
 %   T, the estimated set of rigid transforms
-%   X, the reconstructed image after applying correction in ec. (23) of the
+%   X, the reconstructed image after applying correction in ec. (28) of the
 %   paper
-%   W, the updated w in ec. (22) of the paper
+%   W, the updated w in ec. (27) of the paper
 %   FLAGW, the updated track of previous change in the energy of the
 %   solution
 %   
@@ -201,7 +201,7 @@ for n=1:nT
     end    
     %permute(T,[5 6 1 2 3 4])    
        
-    %This would diminish drifting, as suggested in ec. (23) in the paper
+    %This would diminish drifting, as suggested in ec. (28) in the paper
     if meanT
         Tmed=mean(T,5);
         etD=precomputationsSincRigidTransform(kGrid,kkGrid,rkGrid,Tmed,1,0);

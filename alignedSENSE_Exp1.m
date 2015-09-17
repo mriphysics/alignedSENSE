@@ -56,7 +56,7 @@ end
 nExtern=10000;%Maximum number of iterations of the joint method
 nX=3;%Number of iterations of CG
 nT=1;%Number of iterations of Newton's method
-winic=1;%initial w in ec. (22) of the paper
+winic=1;%initial w in ec. (27) of the paper
 
 %Preconditioner for CG
 SH=conj(S);
